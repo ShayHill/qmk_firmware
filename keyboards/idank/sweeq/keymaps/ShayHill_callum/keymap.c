@@ -29,24 +29,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [1] = LAYOUT(  // symbols
-        KC_ESC  , KC_LBRC , KC_LCBR , KC_LPRN , KC_TILDE, KC_CIRC , KC_RPRN , KC_RCBR , KC_RBRC , KC_GRV  ,
-        KC_MINS , KC_ASTR , KC_EQL  , KC_UNDS , KC_DLR  , KC_HASH , KC_RGUI , KC_RALT , KC_RCTL , KC_RSFT ,
-        KC_PLUS , KC_PIPE , KC_AT   , KC_SLSH , KC_PERC , XXXXXXX , KC_BSLS , KC_AMPR , KC_QUES , KC_EXLM ,
-                                      MO(3)   , _______ , _______ , XXXXXXX
+        XXXXXXX , KC_LBRC , KC_LCBR , KC_LPRN , KC_TILDE, KC_CIRC , KC_RPRN , KC_RCBR , KC_RBRC , KC_GRV  ,
+        KC_MINS , KC_ASTR , KC_EQL  , KC_UNDS , KC_DLR  , KC_HASH , OS_RGUI , OS_RALT , OS_RCTL , OS_RSFT ,
+        KC_PLUS , KC_PIPE , KC_AT   , KC_SLSH , KC_PERC , KC_SCLN , KC_BSLS , KC_AMPR , KC_QUES , KC_EXLM ,
+                                      MO(3)   , _______ , _______ , _______
     ),
 
     [2] = LAYOUT(  // navigation
-        KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
-        KC_A    , KC_S    , KC_D    , KC_F    , KC_G    , KC_H    , KC_J    , KC_K    , KC_L    , KC_SCLN ,
-        KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SLSH ,
-                                      MO(1)   , KC_RSFT , KC_SPC  , MO(2)
-    )
+        KC_TAB  , KC_W    , KC_COLN , KC_ESC  , XXXXXXX , KC_HOME , KC_PGDN , KC_PGUP , KC_END  , MO(4)   ,
+        OS_LSFT , OS_LCTL , OS_LALT , OS_LGUI , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT , KC_ENT  ,
+        XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_BSPC , KC_DEL  , XXXXXXX ,
+                                      _______ , _______ , _______ , MO(3)
+    ),
 
-    [3] = LAYOUT(  // navigation
-        KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
-        KC_A    , KC_S    , KC_D    , KC_F    , KC_G    , KC_H    , KC_J    , KC_K    , KC_L    , KC_SCLN ,
-        KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SLSH ,
-                                      MO(1)   , KC_RSFT , KC_SPC  , MO(2)
+    [3] = LAYOUT(  // numbers
+        KC_1    , KC_2    , KC_3    , KC_4    , KC_5    , KC_6    , KC_7    , KC_8    , KC_9    , KC_0    ,
+        OS_LSFT , OS_LCTL , OS_LALT , OS_LGUI , KC_F11  , KC_F12  , OS_RGUI , OS_RALT , OS_RCTL , OS_RSFT ,
+        KC_F1   , KC_F2   , KC_F3   , KC_F4   , KC_F5   , KC_F6   , KC_F7   , KC_F8   , KC_F9   , KC_F10  ,
+                                      _______ , _______ , _______ , _______
+    ),
+
+    [4] = LAYOUT(  // media
+        XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_VOLU , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+        XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_VOLD , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+        XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_MUTE , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+                                      _______ , _______ , TO(0) , _______
     )
 
 };
