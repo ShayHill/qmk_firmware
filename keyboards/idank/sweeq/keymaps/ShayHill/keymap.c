@@ -20,7 +20,7 @@
 #define C_ALT LALT_T(KC_C)
 #define COMM_ALT LALT_T(KC_COMM)
 #define DOT_CTL LCTL_T(KC_DOT)
-/* #define SPC_LT7 LT(7,KC_SPC) */
+#define SPC_SYS LT(7,KC_SPC)
 #define CTL_ALT LCTL(KC_LALT)
 #define CA_SFT LCA(KC_LSFT)
 
@@ -30,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
         A_SFT   , S_NAV   , D_MOUSE , F_SYMR  , KC_G    , KC_H    , J_SYML  , K_FUN   , L_NUM   , SCLN_SFT,
         KC_Z    , X_CTL   , C_ALT   , KC_V    , KC_B    , KC_N    , KC_M    , COMM_ALT, DOT_CTL , KC_SLSH ,
-                                      KC_P0   , KC_BSPC , KC_SPC  , MO(7)
+                                      KC_P0   , KC_BSPC , SPC_SYS , KC_P1
     ),
 
     [1] = LAYOUT_split_3x5_2(  // mouse
@@ -57,12 +57,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [4] = LAYOUT_split_3x5_2(  // syml
         _______ , KC_COLN , KC_LT   , KC_GT   , KC_SCLN , _______ , _______ , _______ , _______ , _______ ,
         KC_LCBR , KC_RCBR , KC_LPRN , KC_RPRN , KC_AT   , _______ , XXXXXXX , KC_EQL  , KC_PLUS , KC_PERC ,
-        _______ , KC_EXLM , KC_LBRC , KC_RBRC , _______ , _______ , _______ , KC_RALT , KC_RCTL , _______ ,
+        _______ , KC_EXLM , KC_LBRC , KC_RBRC , KC_MUTE , _______ , _______ , KC_RALT , KC_RCTL , _______ ,
                                       KC_VOLD , _______ , _______ , KC_VOLU
     ),
 
     [5] = LAYOUT_split_3x5_2(  // fun
-        _______ , KC_F7   , KC_F8   , KC_F9   , KC_F10  , _______ , _______ , _______ , _______ , _______ ,
+        _______ , KC_F7   , KC_F8   , KC_F9   , KC_F10  , _______ , _______ , _______ , _______ , KC_PSCR ,
         KC_LSFT , KC_F4   , KC_F5   , KC_F6   , KC_F11  , _______ , XXXXXXX , CTL_ALT , XXXXXXX , KC_RSFT ,
         _______ , KC_F1   , KC_F2   , KC_F3   , KC_F12  , _______ , _______ , KC_RALT , KC_RCTL , _______ ,
                                       _______ , _______ , _______ , _______
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______ , _______ , KC_COLN , KC_ESC  , _______ , _______ , _______ , _______ , _______ , KC_DEL  ,
         KC_LSFT , KC_PERC , KC_SLSH , KC_ENT  , _______ , DF(1)   , KC_RGUI , XXXXXXX , XXXXXXX , KC_RSFT ,
         _______ , KC_LCTL , KC_LALT , KC_EXLM , _______ , DF(0)   , _______ , COMM_ALT, DOT_CTL , QK_BOOT ,
-                                      _______ , KC_TAB  , _______ , XXXXXXX
+                                      CW_TOGG , KC_TAB  , _______ , _______
     )
 };
 
