@@ -35,50 +35,50 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT_split_3x5_2(  // mouse
         _______ , _______ , _______ , _______ , _______ , KC_BTN1 , KC_WH_U , KC_BTN2 , _______ , _______ ,
-        _______ , KC_BTN2 , XXXXXXX , KC_BTN1 , _______ , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R , _______ ,
-        _______ , _______ , _______ , _______ , _______ , KC_WH_L , KC_WH_D , KC_WH_R , _______ , _______ ,
+        KC_LSFT , KC_BTN2 , XXXXXXX , KC_BTN1 , _______ , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R , KC_RSFT ,
+        _______ , KC_LCTL , KC_LALT , _______ , _______ , KC_WH_L , KC_WH_D , KC_WH_R , KC_RCTL , _______ ,
                                       _______ , _______ , _______ , _______
     ),
 
     [2] = LAYOUT_split_3x5_2(  // nav
-        _______ , _______ , _______ , _______ , _______ , KC_HOME , KC_PGUP , KC_PGDN , KC_END  , _______ ,
-        CA_SFT  , XXXXXXX , CTL_ALT , KC_LGUI , _______ , KC_LEFT , KC_UP   , KC_DOWN , KC_RGHT , _______ ,
-        _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,
+        _______ , _______ , _______ , _______ , _______ , KC_HOME , KC_PGDN , KC_PGUP , KC_END  , _______ ,
+        CA_SFT  , XXXXXXX , CTL_ALT , KC_LGUI , _______ , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT , KC_RSFT ,
+        _______ , KC_LCTL , KC_LALT , _______ , _______ , _______ , _______ , KC_RALT , KC_RCTL , _______ ,
                                       _______ , _______ , _______ , _______
     ),
 
     [3] = LAYOUT_split_3x5_2(  // symr
         _______ , _______ , _______ , _______ , _______ , _______ , KC_UNDS , KC_PIPE , KC_QUOT , _______ ,
         KC_CIRC , KC_ASTR , KC_AMPR , XXXXXXX , _______ , KC_HASH , KC_TILD , KC_SLSH , KC_DQUO , KC_DLR  ,
-        _______ , _______ , _______ , _______ , _______ , _______ , KC_MINS , KC_BSLS , KC_GRV  , _______ ,
+        _______ , KC_LCTL , KC_LALT , _______ , _______ , _______ , KC_MINS , KC_BSLS , KC_GRV  , _______ ,
                                       _______ , _______ , _______ , _______
     ),
 
     [4] = LAYOUT_split_3x5_2(  // syml
         _______ , KC_COLN , KC_LT   , KC_GT   , KC_SCLN , _______ , _______ , _______ , _______ , _______ ,
         KC_LCBR , KC_RCBR , KC_LPRN , KC_RPRN , KC_AT   , _______ , XXXXXXX , KC_EQL  , KC_PLUS , KC_PERC ,
-        _______ , KC_EXLM , KC_LBRC , KC_RBRC , _______ , _______ , _______ , _______ , _______ , _______ ,
+        _______ , KC_EXLM , KC_LBRC , KC_RBRC , _______ , _______ , _______ , KC_RALT , KC_RCTL , _______ ,
                                       KC_VOLD , _______ , _______ , KC_VOLU
     ),
 
     [5] = LAYOUT_split_3x5_2(  // fun
         _______ , KC_F7   , KC_F8   , KC_F9   , KC_F10  , _______ , _______ , _______ , _______ , _______ ,
-        _______ , KC_F4   , KC_F5   , KC_F6   , KC_F11  , _______ , XXXXXXX , CTL_ALT , _______ , _______ ,
-        _______ , KC_F1   , KC_F2   , KC_F3   , KC_F12  , _______ , _______ , _______ , _______ , _______ ,
+        KC_LSFT , KC_F4   , KC_F5   , KC_F6   , KC_F11  , _______ , XXXXXXX , CTL_ALT , XXXXXXX , KC_RSFT ,
+        _______ , KC_F1   , KC_F2   , KC_F3   , KC_F12  , _______ , _______ , KC_RALT , KC_RCTL , _______ ,
                                       _______ , _______ , _______ , _______
     ),
 
     [6] = LAYOUT_split_3x5_2(  // num
         KC_PSLS , KC_7    , KC_8    , KC_9    , KC_PPLS , _______ , _______ , _______ , _______ , _______ ,
-        KC_0    , KC_4    , KC_5    , KC_6    , KC_PMNS , _______ , _______ , _______ , XXXXXXX , _______ ,
+        KC_0    , KC_4    , KC_5    , KC_6    , KC_PMNS , _______ , XXXXXXX , XXXXXXX , XXXXXXX , KC_RSFT ,
         KC_PAST , KC_1    , KC_2    , KC_3    , KC_PEQL , _______ , _______ , _______ , _______ , _______ ,
                                       _______ , _______ , _______ , _______
     ),
 
     [7] = LAYOUT_split_3x5_2(  // sys
         _______ , _______ , KC_COLN , KC_ESC  , _______ , _______ , _______ , _______ , _______ , KC_DEL  ,
-        _______ , KC_PERC , KC_SLSH , KC_ENT  , _______ , DF(1)   , KC_LGUI , _______ , _______ , _______ ,
-        _______ , _______ , _______ , KC_EXLM , _______ , DF(0)   , _______ , COMM_ALT, DOT_CTL , QK_BOOT ,
+        KC_LSFT , KC_PERC , KC_SLSH , KC_ENT  , _______ , DF(1)   , KC_RGUI , XXXXXXX , XXXXXXX , KC_RSFT ,
+        _______ , KC_LCTL , KC_LALT , KC_EXLM , _______ , DF(0)   , _______ , COMM_ALT, DOT_CTL , QK_BOOT ,
                                       _______ , KC_TAB  , _______ , XXXXXXX
     )
 };
