@@ -77,8 +77,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [7] = LAYOUT_split_3x5_2(  // sys
         _______ , _______ , KC_COLN , KC_ESC  , _______ , _______ , _______ , _______ , _______ , KC_DEL  ,
-        KC_LSFT , KC_PERC , KC_SLSH , KC_ENT  , _______ , DF(1)   , KC_RGUI , XXXXXXX , XXXXXXX , KC_RSFT ,
-        _______ , KC_LCTL , KC_LALT , KC_EXLM , _______ , DF(0)   , _______ , COMM_ALT, DOT_CTL , QK_BOOT ,
+        _______ , KC_PERC , KC_SLSH , KC_ENT  , _______ , DF(1)   , KC_RGUI , XXXXXXX , XXXXXXX , KC_RSFT ,
+        _______ , _______ , _______ , KC_EXLM , _______ , DF(0)   , _______ , COMM_ALT, DOT_CTL , QK_BOOT ,
                                       CW_TOGG , KC_TAB  , _______ , _______
     )
 };
