@@ -16,6 +16,7 @@
 #define K_FUN LT(5,KC_K)
 #define L_NUM LT(6,KC_L)
 #define SCLN_SFT LSFT_T(KC_SCLN)
+#define ENT_SFT LSFT_T(KC_ENT)
 #define X_CTL LCTL_T(KC_X)
 #define C_ALT LALT_T(KC_C)
 #define COMM_ALT LALT_T(KC_COMM)
@@ -24,13 +25,23 @@
 #define CTL_ALT LCTL(KC_LALT)
 #define CA_SFT LCA(KC_LSFT)
 
+#define OS_LSFT OSM(MOD_LSFT)
+#define OS_LCTL OSM(MOD_LCTL)
+#define OS_LALT OSM(MOD_LALT)
+#define OS_LGUI OSM(MOD_LGUI)
+#define OS_RSFT OSM(MOD_RSFT)
+#define OS_RCTL OSM(MOD_RCTL)
+#define OS_RALT OSM(MOD_RALT)
+#define OS_RGUI OSM(MOD_RGUI)
+#define TAB_OS LT(8,KC_TAB)
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x5_2(  // alpha
         KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
-        A_SFT   , S_NAV   , D_MOUSE , F_SYMR  , KC_G    , KC_H    , J_SYML  , K_FUN   , L_NUM   , SCLN_SFT,
+        A_SFT   , S_NAV   , D_MOUSE , F_SYMR  , KC_G    , KC_H    , J_SYML  , K_FUN   , L_NUM   , ENT_SFT,
         KC_Z    , X_CTL   , C_ALT   , KC_V    , KC_B    , KC_N    , KC_M    , COMM_ALT, DOT_CTL , KC_SLSH ,
-                                      KC_P0   , KC_BSPC , SPC_SYS , KC_P1
+                                      TAB_OS  , KC_BSPC , SPC_SYS , TAB_OS
     ),
 
     [1] = LAYOUT_split_3x5_2(  // mouse
@@ -69,9 +80,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [6] = LAYOUT_split_3x5_2(  // num
-        KC_PSLS , KC_7    , KC_8    , KC_9    , KC_PPLS , _______ , _______ , _______ , _______ , _______ ,
-        KC_0    , KC_4    , KC_5    , KC_6    , KC_PMNS , _______ , XXXXXXX , XXXXXXX , XXXXXXX , KC_RSFT ,
-        KC_PAST , KC_1    , KC_2    , KC_3    , KC_PEQL , _______ , _______ , _______ , _______ , _______ ,
+        KC_PSLS , KC_KP_7 , KC_KP_8 , KC_KP_9 , KC_PPLS , _______ , _______ , _______ , _______ , _______ ,
+        KC_KP_0 , KC_KP_4 , KC_KP_5 , KC_KP_6 , KC_PMNS , _______ , XXXXXXX , XXXXXXX , XXXXXXX , KC_RSFT ,
+        KC_PAST , KC_KP_1 , KC_KP_2 , KC_KP_3 , KC_PEQL , _______ , _______ , _______ , _______ , _______ ,
                                       _______ , _______ , _______ , _______
     ),
 
@@ -79,8 +90,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______ , _______ , KC_COLN , KC_ESC  , _______ , _______ , _______ , _______ , _______ , KC_DEL  ,
         _______ , KC_PERC , KC_SLSH , KC_ENT  , _______ , DF(1)   , KC_RGUI , XXXXXXX , XXXXXXX , KC_RSFT ,
         _______ , _______ , _______ , KC_EXLM , _______ , DF(0)   , _______ , COMM_ALT, DOT_CTL , QK_BOOT ,
-                                      CW_TOGG , KC_TAB  , _______ , _______
-    )
+                                      CW_TOGG , KC_TAB  , _______ , KC_CAPS
+    ),
+
+    [8] = LAYOUT_split_3x5_2(  // one-shot
+        _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,
+        OS_LSFT , _______ , _______ , OS_LGUI , _______ , _______ , OS_RGUI , _______ , _______ , OS_RSFT ,
+        _______ , OS_LCTL , OS_LALT , _______ , _______ , _______ , _______ , OS_RALT , OS_RCTL , _______ ,
+                                      XXXXXXX , _______ , _______  , XXXXXXX
+    ),
 };
 
 
