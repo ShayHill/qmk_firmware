@@ -2,4 +2,4 @@
 
 ## layer 0: alpha
 
-![layer 0](/qmk_firmware/readme_images/layer_0.svg)
+![layer 0](/readme_images/layer_0.svg)
