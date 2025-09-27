@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
         A_SFT   , S_NAV   , D_MOUSE , F_SYMR  , KC_G    , KC_H    , J_SYML  , K_FUN   , L_NUM   , SCLN_SFT,
         KC_Z    , X_CTL   , C_ALT   , KC_V    , KC_B    , KC_N    , KC_M    , COMM_ALT, DOT_CTL , KC_SLSH ,
-                                      TAB_OS  , OS_LSFT , SPC_SYS , TAB_OS
+                                      TAB_OS  , OS_LSFT , SPC_SYS , KC_BSPC
     ),
 
     [1] = LAYOUT_split_3x5_2(  // nav
@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,
         OS_LSFT , _______ , _______ , OS_LGUI , _______ , _______ , OS_RGUI , _______ , _______ , OS_RSFT ,
         _______ , OS_LCTL , OS_LALT , _______ , _______ , _______ , _______ , OS_RALT , OS_RCTL , _______ ,
-                                      XXXXXXX , _______ , _______ , XXXXXXX
+                                      XXXXXXX , _______ , _______ , _______
     ),
 };
 
